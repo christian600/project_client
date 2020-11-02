@@ -13,9 +13,10 @@ class Manage:
     def run(self):
         self.inet.run()
 
-
+'''
 manager = Manage()
 manager.init()
 manager.run()
 buff = "hello world"
 manager.inet.send_msg(buff, 1)
+'''

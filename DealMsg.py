@@ -1,5 +1,5 @@
 import struct
-
+import Asset_pb2
 
 class DealMsg:
     def __init__(self):
@@ -12,7 +12,7 @@ class DealMsg:
         msg_size = 12 + buff_size
         msg_format = '<3i{0}s'.format(buff_size)
         data = struct.pack(msg_format, msg_size, msg_type, buff_size,
-                           buff.encode())
+                           buff)
         return data
 
     def deal_recv_data(self, byte_data):
@@ -36,4 +36,8 @@ class DealMsg:
         print("msg_size: {0}".format(msg[0]))
         print("type: {0}".format(msg[1]))
         print("buff_size: {0}".format(msg[2]))
-        print("buff: {0}".format(msg[3].decode()))
+        log_rsp = Asset_pb2.LoginRsp()
+        print(type(msg[3]))
+        log_rsp.ParseFromString(msg[3])
+        print(log_rsp.code)
+        print(log_rsp.rsp)
