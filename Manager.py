@@ -1,10 +1,11 @@
 import INet
 import DealMsg
-
+from SendMsgSignal import SendMsgSignal
 
 class Manage:
     def __init__(self):
-        self.deal_msg = DealMsg.DealMsg()
+        self.signal = SendMsgSignal()
+        self.deal_msg = DealMsg.DealMsg(self.signal)
         self.inet = INet.INet(self.deal_msg)
 
     def init(self):
@@ -12,11 +13,3 @@ class Manage:
 
     def run(self):
         self.inet.run()
-
-'''
-manager = Manage()
-manager.init()
-manager.run()
-buff = "hello world"
-manager.inet.send_msg(buff, 1)
-'''

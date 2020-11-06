@@ -1,12 +1,15 @@
-import Manager
 import Asset_pb2
+import Manager
+import CallLoginMainWin
+import sys
 
 if __name__ == "__main__":
     manager = Manager.Manage()
     manager.init()
+    app = CallLoginMainWin.QApplication(sys.argv)
+    login_win = CallLoginMainWin.CallLoginMainWin(manager.inet, manager.signal)
+    login_win.show()
     manager.run()
-    login_rsq = Asset_pb2.LoginReq()
-    login_rsq.id = "322026"
-    login_rsq.password = "h"
-    str_rsp = login_rsq.SerializeToString()
-    manager.inet.send_msg(str_rsp, 1)
+    sys.exit(app.exec_())
+    
+    

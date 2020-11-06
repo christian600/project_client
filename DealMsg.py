@@ -1,8 +1,8 @@
 import struct
-import Asset_pb2
 
 class DealMsg:
-    def __init__(self):
+    def __init__(self, signal):
+        self.signal = signal
         self.func_dict = {}
         self.init_map()
 
@@ -29,15 +29,6 @@ class DealMsg:
     def deal_msg(self, msg):
         # msg包含了type与buff， 通过表驱动， 调用具体的处理函数
         self.func_dict[msg[1]](msg)
-        pass
 
     def Login_return(self, msg):
-        print("login success")
-        print("msg_size: {0}".format(msg[0]))
-        print("type: {0}".format(msg[1]))
-        print("buff_size: {0}".format(msg[2]))
-        log_rsp = Asset_pb2.LoginRsp()
-        print(type(msg[3]))
-        log_rsp.ParseFromString(msg[3])
-        print(log_rsp.code)
-        print(log_rsp.rsp)
+        self.signal.log_rsp.emit(msg)
