@@ -12,3 +12,13 @@ message LoginRsp
     int64 code = 1;
     string rsp = 2;
 }
+
+message LogoutReq
+{
+    int64 quit_flag = 1;
+}
+
+message LogoutRsp
+{
+    int64 quit_flag = 1;
+}

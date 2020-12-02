@@ -21,7 +21,7 @@ class MyThread(threading.Thread):
         while self.exit_flag > 0:
             data = self.sock.recv(1024)
             recv_msg = self.deal_msg.deal_recv_data(data)
-            if (recv_msg[1] == 1):
+            if (recv_msg[1] == 2):
                 self.exit_flag = 0
             self.deal_msg.deal_msg(recv_msg)
 

@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0b\x41sset.proto\x12\x0b\x41ssetManage\"(\n\x08LoginReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x10\n\x08password\x18\x02 \x01(\t\"%\n\x08LoginRsp\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x03\x12\x0b\n\x03rsp\x18\x02 \x01(\tb\x06proto3'
+  serialized_pb=b'\n\x0b\x41sset.proto\x12\x0b\x41ssetManage\"(\n\x08LoginReq\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x10\n\x08password\x18\x02 \x01(\t\"%\n\x08LoginRsp\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x03\x12\x0b\n\x03rsp\x18\x02 \x01(\t\"\x1e\n\tLogoutReq\x12\x11\n\tquit_flag\x18\x01 \x01(\x03\"\x1e\n\tLogoutRsp\x12\x11\n\tquit_flag\x18\x01 \x01(\x03\x62\x06proto3'
 )
 
 
@@ -102,8 +102,74 @@ _LOGINRSP = _descriptor.Descriptor(
   serialized_end=107,
 )
 
+
+_LOGOUTREQ = _descriptor.Descriptor(
+  name='LogoutReq',
+  full_name='AssetManage.LogoutReq',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='quit_flag', full_name='AssetManage.LogoutReq.quit_flag', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=109,
+  serialized_end=139,
+)
+
+
+_LOGOUTRSP = _descriptor.Descriptor(
+  name='LogoutRsp',
+  full_name='AssetManage.LogoutRsp',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='quit_flag', full_name='AssetManage.LogoutRsp.quit_flag', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=141,
+  serialized_end=171,
+)
+
 DESCRIPTOR.message_types_by_name['LoginReq'] = _LOGINREQ
 DESCRIPTOR.message_types_by_name['LoginRsp'] = _LOGINRSP
+DESCRIPTOR.message_types_by_name['LogoutReq'] = _LOGOUTREQ
+DESCRIPTOR.message_types_by_name['LogoutRsp'] = _LOGOUTRSP
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 LoginReq = _reflection.GeneratedProtocolMessageType('LoginReq', (_message.Message,), {
@@ -119,6 +185,20 @@ LoginRsp = _reflection.GeneratedProtocolMessageType('LoginRsp', (_message.Messag
   # @@protoc_insertion_point(class_scope:AssetManage.LoginRsp)
   })
 _sym_db.RegisterMessage(LoginRsp)
+
+LogoutReq = _reflection.GeneratedProtocolMessageType('LogoutReq', (_message.Message,), {
+  'DESCRIPTOR' : _LOGOUTREQ,
+  '__module__' : 'Asset_pb2'
+  # @@protoc_insertion_point(class_scope:AssetManage.LogoutReq)
+  })
+_sym_db.RegisterMessage(LogoutReq)
+
+LogoutRsp = _reflection.GeneratedProtocolMessageType('LogoutRsp', (_message.Message,), {
+  'DESCRIPTOR' : _LOGOUTRSP,
+  '__module__' : 'Asset_pb2'
+  # @@protoc_insertion_point(class_scope:AssetManage.LogoutRsp)
+  })
+_sym_db.RegisterMessage(LogoutRsp)
 
 
 # @@protoc_insertion_point(module_scope)

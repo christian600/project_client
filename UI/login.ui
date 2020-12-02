@@ -36,9 +36,9 @@
    <widget class="QLabel" name="lgl_title_of_app">
     <property name="geometry">
      <rect>
-      <x>550</x>
+      <x>540</x>
       <y>0</y>
-      <width>91</width>
+      <width>111</width>
       <height>41</height>
      </rect>
     </property>
@@ -51,7 +51,7 @@
      </font>
     </property>
     <property name="text">
-     <string>金融风暴</string>
+     <string>富途资金管理平台</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btn_register">
@@ -150,6 +150,19 @@
       <string>登录</string>
      </property>
     </widget>
+   </widget>
+   <widget class="QLabel" name="lbl_login_warning">
+    <property name="geometry">
+     <rect>
+      <x>463</x>
+      <y>91</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
    </widget>
   </widget>
  </widget>

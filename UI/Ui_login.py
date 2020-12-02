@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'd:\persion\project_client\UI\login.ui'
+# Form implementation generated from reading ui file 'd:\project_client\UI\login.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.1
 #
@@ -22,7 +22,7 @@ class Ui_MainWindow(object):
         self.lbl_bg_of_login.setGeometry(QtCore.QRect(0, 0, 350, 500))
         self.lbl_bg_of_login.setObjectName("lbl_bg_of_login")
         self.lgl_title_of_app = QtWidgets.QLabel(self.centralwidget)
-        self.lgl_title_of_app.setGeometry(QtCore.QRect(550, 0, 91, 41))
+        self.lgl_title_of_app.setGeometry(QtCore.QRect(540, 0, 111, 41))
         font = QtGui.QFont()
         font.setFamily("Goudy Old Style")
         font.setBold(False)
@@ -60,6 +60,10 @@ class Ui_MainWindow(object):
         self.btn_confrim_login = QtWidgets.QPushButton(self.splitter)
         self.btn_confrim_login.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.btn_confrim_login.setObjectName("btn_confrim_login")
+        self.lbl_login_warning = QtWidgets.QLabel(self.centralwidget)
+        self.lbl_login_warning.setGeometry(QtCore.QRect(463, 91, 221, 41))
+        self.lbl_login_warning.setText("")
+        self.lbl_login_warning.setObjectName("lbl_login_warning")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -74,7 +78,7 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.lbl_bg_of_login.setText(_translate("MainWindow", "背景图片"))
-        self.lgl_title_of_app.setText(_translate("MainWindow", "金融风暴"))
+        self.lgl_title_of_app.setText(_translate("MainWindow", "富途资金管理平台"))
         self.btn_register.setText(_translate("MainWindow", "没有账号？去注册"))
         self.btn_login_close.setText(_translate("MainWindow", "X"))
         self.edit_pwd_of_user.setPlaceholderText(_translate("MainWindow", "请输入密码"))
